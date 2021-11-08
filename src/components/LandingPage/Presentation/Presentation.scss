@@ -1,0 +1,22 @@
+.Presentation {
+  height: 500px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
+
+  & > div {
+    background-color: rgba(black, 0.4);
+    padding: 20px;
+    flex: 1;
+    h1 {
+      margin: 0 0 10px 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
+}

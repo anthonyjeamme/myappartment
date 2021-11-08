@@ -1,0 +1,30 @@
+.Description {
+  text-align: center;
+  padding: 80px 0;
+
+  .key-numbers {
+    width: 700px;
+    margin: 0 auto 40px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    & > div {
+      padding: 20px 10px;
+      border-radius: 8px;
+      background-color: white;
+      box-shadow: 0 0 20px rgba(#723016, 0.1);
+
+      & > .icon {
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+
+      & > .title {
+        font-size: 18px;
+
+        font-weight: 500;
+      }
+    }
+  }
+}
