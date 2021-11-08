@@ -7,3 +7,20 @@ exports.createPages = async ({ actions }) => {
     defer: true,
   })
 }
+
+const onCreateWebpackConfig = ({ stage, loaders, actions, getConfig }) => {
+  if (stage === "build-html" || stage === "develop-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /leaflet/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
+}
+
+module.exports = onCreateWebpackConfig
