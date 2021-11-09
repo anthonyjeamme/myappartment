@@ -15,6 +15,9 @@ const TestSSR = ({ serverData, ...props }) => {
 
 export async function getServerData() {
   return {
+    headers: {
+      message: "hello world",
+    },
     props: {
       metadata: {
         title: "XXXXX",
