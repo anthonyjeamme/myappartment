@@ -8,7 +8,7 @@ exports.createPages = async ({ actions }) => {
   })
 }
 
-const onCreateWebpackConfig = ({ stage, loaders, actions, getConfig }) => {
+exports.onCreateWebpackConfig = ({ stage, loaders, actions, getConfig }) => {
   if (stage === "build-html" || stage === "develop-html") {
     actions.setWebpackConfig({
       module: {
@@ -22,5 +22,3 @@ const onCreateWebpackConfig = ({ stage, loaders, actions, getConfig }) => {
     })
   }
 }
-
-module.exports = onCreateWebpackConfig

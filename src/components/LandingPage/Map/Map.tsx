@@ -114,7 +114,13 @@ const Map = () => {
   )
 }
 
-export default Map
+const MapWrapper = () => {
+  if (typeof window !== "undefined") return <Map />
+
+  return null
+}
+
+export default MapWrapper
 
 function measure(lat1, lon1, lat2, lon2) {
   // generally used geo measurement function
