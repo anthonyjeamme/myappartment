@@ -17,13 +17,15 @@ const CoOwnership = () => {
           }}
         >
           <div>
-            <img src="/images/photos/immeuble.png" style={{ width: 300 }} />
+            <img src="/images/photos/immeuble.png" style={{ width: "100%" }} />
           </div>
 
           <div>
             L'immeuble possède 3 étages sans assenceur.
             <div>Nombre de lots</div>
             <div>Immeuble construit en ... classé</div>
+            <div>Participation aux charges : 23‰.</div>
+            <div>Charges trimestrielles : 100.38€</div>
           </div>
         </div>
       </Container>
