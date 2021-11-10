@@ -6,6 +6,7 @@ import { MapContainer, TileLayer, Marker, Popup, Tooltip } from "react-leaflet"
 import "leaflet/dist/leaflet.css"
 
 import "./Map.scss"
+import Container from "../../Common/Container/Container"
 
 const Map = () => {
   const coordinates: LatLngExpression = [45.7666308, 4.8140858]
@@ -68,9 +69,12 @@ const Map = () => {
 
   return (
     <div className="Map">
-      <MapPin />
+      <Container>
+        <h2>A proximité</h2>
+      </Container>
+
       <MapContainer
-        center={coordinates}
+        center={proximity.house.position}
         zoom={17}
         scrollWheelZoom={false}
         style={{ height: 500 }}
