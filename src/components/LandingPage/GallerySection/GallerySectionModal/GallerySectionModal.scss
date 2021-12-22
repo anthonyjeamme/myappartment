@@ -21,6 +21,10 @@
         opacity: 1;
       }
     }
+
+    @media (pointer: coarse) {
+      display: none;
+    }
   }
 
   button.previous {
