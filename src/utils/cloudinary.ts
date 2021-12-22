@@ -15,8 +15,12 @@ const defaultParams: TGetPictureURLParams = {
   q: "auto",
 }
 
+export const isBrowser = () => typeof window !== "undefined"
+
 const generateCloudinaryURLParamsString = (params: TGetPictureURLParams) => {
   const list = []
+
+  if (!isBrowser()) return ""
 
   Object.keys(params).forEach(key => {
     const value = params[key]
