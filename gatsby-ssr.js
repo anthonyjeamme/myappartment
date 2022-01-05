@@ -3,10 +3,11 @@ import React from "react"
 export const onPreRenderHTML = ({
   getHeadComponents,
   replaceHeadComponents,
+  ...props
 }) => {
   const headComponents = getHeadComponents()
 
-  console.log("XXXXXXX")
+  console.log("onPreRenderHTML", props.pathname)
 
   replaceHeadComponents([
     <title key="A">La chatte a ta patronne</title>,
