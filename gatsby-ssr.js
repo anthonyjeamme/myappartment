@@ -1,15 +1,15 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/ssr-apis/
- */
+import React from "react"
 
-// You can delete this file if you're not using it
 export const onPreRenderHTML = ({
   getHeadComponents,
   replaceHeadComponents,
 }) => {
   const headComponents = getHeadComponents()
 
-  console.log(headComponents)
+  console.log("XXXXXXX")
+
+  replaceHeadComponents([
+    <title key="A">La chatte a ta patronne</title>,
+    ...headComponents.filter(component => component.type !== "title"),
+  ])
 }
